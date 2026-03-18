@@ -1,7 +1,35 @@
 import './Hero.css'
+import { useEffect, useState } from 'react'
 import { profileLinks } from '../config/links'
 
 export default function Hero() {
+  const typingLines = [
+    'terraform plan --target=portfolio_infra',
+    'kubectl get pods -n production',
+    'gh workflow run deploy.yml',
+  ]
+
+  const [lineIndex, setLineIndex] = useState(0)
+  const [typedText, setTypedText] = useState('')
+
+  useEffect(() => {
+    const line = typingLines[lineIndex]
+
+    if (typedText.length < line.length) {
+      const timer = setTimeout(() => {
+        setTypedText(line.slice(0, typedText.length + 1))
+      }, 48)
+      return () => clearTimeout(timer)
+    }
+
+    const pause = setTimeout(() => {
+      setTypedText('')
+      setLineIndex((value) => (value + 1) % typingLines.length)
+    }, 1300)
+
+    return () => clearTimeout(pause)
+  }, [lineIndex, typedText])
+
   return (
     <section className="hero reveal">
       <div className="container hero-content">
@@ -29,6 +57,12 @@ export default function Hero() {
             Computer Science undergraduate focused on cloud-native delivery,
             CI/CD automation, and reliable DevOps systems.
           </p>
+
+          <div className="typing-console" aria-live="polite">
+            <span className="typing-prompt">$</span>
+            <span className="typing-text">{typedText}</span>
+            <span className="typing-caret"></span>
+          </div>
 
           <div className="quick-links">
             <a href={profileLinks.email}>svsamarsingh@gmail.com</a>

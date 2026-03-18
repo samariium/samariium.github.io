@@ -22,6 +22,7 @@ export default function Footer() {
 
         <div className="footer-credit">
           <p>© {currentYear} Samar Singh. Dehradun, India.</p>
+          <p>Shortcuts: Ctrl+K palette, G GitHub, P Projects, C Contact</p>
         </div>
       </div>
     </footer>

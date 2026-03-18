@@ -117,6 +117,35 @@
   animation: slideIn 0.8s ease 0.2s backwards;
 }
 
+.typing-console {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  border: 1px solid var(--border-color);
+  border-radius: 10px;
+  background: rgba(7, 11, 29, 0.58);
+  padding: 8px 12px;
+  margin-bottom: 18px;
+  min-height: 40px;
+}
+
+.typing-prompt {
+  color: var(--secondary);
+  font-size: 0.85rem;
+}
+
+.typing-text {
+  color: var(--primary);
+  font-size: 0.85rem;
+}
+
+.typing-caret {
+  width: 8px;
+  height: 14px;
+  background: var(--secondary);
+  animation: blink 0.95s steps(2, start) infinite;
+}
+
 .quick-links {
   display: flex;
   flex-wrap: wrap;
