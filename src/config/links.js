@@ -12,8 +12,8 @@ export const projectLinks = {
     live: 'https://samariium.github.io',
   },
   aiInterviewPrep: {
-    repo: 'https://github.com/samariium',
-    live: 'https://samariium.github.io',
+    repo: 'https://github.com/samariium/InterView_Prep_AI',
+    live: 'https://github.com/samariium/InterView_Prep_AI',
   },
   aiTripPlanner: {
     repo: 'https://github.com/samariium/AI-Trip-Planner',
