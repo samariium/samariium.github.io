@@ -11,6 +11,7 @@ import DevOpsToolchain from './components/DevOpsToolchain'
 import CicdPipeline from './components/CicdPipeline'
 import InfrastructureMetrics from './components/InfrastructureMetrics'
 import KubernetesCluster from './components/KubernetesCluster'
+import InfraDefenseGame from './components/InfraDefenseGame'
 import Contact from './components/Contact'
 import Footer from './components/Footer'
 import CommandPalette from './components/CommandPalette'
@@ -56,6 +57,12 @@ export default function App() {
         label: 'kubectl cluster-info',
         hint: 'View Kubernetes Cluster',
         action: () => document.getElementById('kubernetes-cluster')?.scrollIntoView({ behavior: 'smooth' }),
+      },
+      {
+        id: 'game',
+        label: 'play defense-game.exe',
+        hint: 'Play Infrastructure Defense Game',
+        action: () => document.getElementById('infra-defense-game')?.scrollIntoView({ behavior: 'smooth' }),
       },
       {
         id: 'contact',
@@ -177,6 +184,7 @@ export default function App() {
       <CicdPipeline />
       <InfrastructureMetrics />
       <KubernetesCluster />
+      <InfraDefenseGame />
       <Contact />
       <Footer />
       <CommandPalette open={paletteOpen} onClose={() => setPaletteOpen(false)} commands={commands} />
