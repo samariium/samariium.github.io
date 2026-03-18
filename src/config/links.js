@@ -8,7 +8,7 @@ export const profileLinks = {
 // Update project repo/live links here.
 export const projectLinks = {
   travelease: {
-    repo: 'https://github.com/samariium',
+    repo: 'https://github.com/TravelEase-Xebia/TravelEase',
     live: 'https://samariium.github.io',
   },
   aiInterviewPrep: {

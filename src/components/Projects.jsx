@@ -4,11 +4,22 @@ import { projectLinks } from '../config/links'
 export default function Projects() {
   const projects = [
     {
+      title: 'AI-Trip-Planner',
+      description: 'An intelligent travel planning application that uses AI to generate personalized trip itineraries based on user preferences, travel dates, and budget.',
+      tech: ['AI/ML', 'Python', 'React', 'API Integration'],
+      repo: projectLinks.aiTripPlanner.repo,
+      live: projectLinks.aiTripPlanner.live,
+      showLive: true,
+      command: 'start --planner=ai --mode=smart-trip',
+      icon: '🗺️'
+    },
+    {
       title: 'TravelEase – Cloud-Native Travel Platform',
       description: 'Containerized and deployed the payment microservice using Docker, reducing environment setup time from 2 hours to under 15 minutes. Built automated CI/CD pipelines using Jenkins and GitHub Actions for faster builds and smoother releases.',
       tech: ['Docker', 'Jenkins', 'GitHub Actions', 'AWS', 'Microservices'],
       repo: projectLinks.travelease.repo,
       live: projectLinks.travelease.live,
+      showLive: false,
       command: 'deploy --env=aws --pipeline=jenkins',
       icon: '✈️'
     },
@@ -18,17 +29,9 @@ export default function Projects() {
       tech: ['React', 'Vite', 'Node.js', 'JWT', 'REST API'],
       repo: projectLinks.aiInterviewPrep.repo,
       live: projectLinks.aiInterviewPrep.live,
+      showLive: false,
       command: 'run --stack=react-node --auth=jwt',
       icon: '🤖'
-    },
-    {
-      title: 'AI-Trip-Planner',
-      description: 'An intelligent travel planning application that uses AI to generate personalized trip itineraries based on user preferences, travel dates, and budget.',
-      tech: ['AI/ML', 'Python', 'React', 'API Integration'],
-      repo: projectLinks.aiTripPlanner.repo,
-      live: projectLinks.aiTripPlanner.live,
-      command: 'start --planner=ai --mode=smart-trip',
-      icon: '🗺️'
     }
   ]
 
@@ -62,9 +65,11 @@ export default function Projects() {
                 <a href={project.repo} className="project-link" target="_blank" rel="noreferrer">
                   git open --repo
                 </a>
-                <a href={project.live} className="project-link" target="_blank" rel="noreferrer">
-                  open --live
-                </a>
+                {project.showLive && (
+                  <a href={project.live} className="project-link" target="_blank" rel="noreferrer">
+                    open --live
+                  </a>
+                )}
               </div>
             </div>
           ))}
