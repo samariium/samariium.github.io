@@ -1,5 +1,6 @@
 import './Contact.css'
 import { useState } from 'react'
+import { profileLinks } from '../config/links'
 
 export default function Contact() {
   const [formData, setFormData] = useState({
@@ -19,7 +20,7 @@ export default function Contact() {
   const handleSubmit = (e) => {
     e.preventDefault()
     // Open email client
-    const mailtoLink = `mailto:svsamarsingh@gmail.com?subject=Contact from ${formData.name}&body=${formData.message}`
+    const mailtoLink = `${profileLinks.email}?subject=Contact from ${formData.name}&body=${formData.message}`
     window.location.href = mailtoLink
   }
 
@@ -34,7 +35,7 @@ export default function Contact() {
               <span className="info-icon">📧</span>
               <div className="info-text">
                 <h4>Email</h4>
-                <a href="mailto:svsamarsingh@gmail.com">svsamarsingh@gmail.com</a>
+                <a href={profileLinks.email}>svsamarsingh@gmail.com</a>
               </div>
             </div>
 
@@ -42,7 +43,7 @@ export default function Contact() {
               <span className="info-icon">📱</span>
               <div className="info-text">
                 <h4>Phone</h4>
-                <a href="tel:+918409420691">+91 8409420691</a>
+                <a href={profileLinks.phone}>+91 8409420691</a>
               </div>
             </div>
 
@@ -57,9 +58,9 @@ export default function Contact() {
             <div className="social-links">
               <h4>Quick Actions</h4>
               <div className="links">
-                <a href="https://github.com/samariium" target="_blank" rel="noopener noreferrer" className="social-link">GitHub</a>
-                <a href="https://linkedin.com/in/samar-singh-42577b1ab" target="_blank" rel="noopener noreferrer" className="social-link">LinkedIn</a>
-                <a href="mailto:svsamarsingh@gmail.com" className="social-link">Email</a>
+                <a href={profileLinks.github} target="_blank" rel="noopener noreferrer" className="social-link">GitHub</a>
+                <a href={profileLinks.linkedin} target="_blank" rel="noopener noreferrer" className="social-link">LinkedIn</a>
+                <a href={profileLinks.email} className="social-link">Email</a>
               </div>
             </div>
           </div>

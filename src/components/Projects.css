@@ -18,6 +18,47 @@
   box-shadow: var(--shadow);
 }
 
+.project-terminal-bar {
+  display: flex;
+  align-items: center;
+  gap: 7px;
+  border: 1px solid rgba(89, 243, 255, 0.22);
+  background: rgba(7, 11, 29, 0.56);
+  border-radius: 8px;
+  padding: 7px 9px;
+  margin-bottom: 12px;
+}
+
+.dot {
+  width: 8px;
+  height: 8px;
+  border-radius: 999px;
+}
+
+.dot.red {
+  background: #ff5f56;
+}
+
+.dot.yellow {
+  background: #ffbd2e;
+}
+
+.dot.green {
+  background: #27c93f;
+}
+
+.terminal-text {
+  margin-left: auto;
+  font-size: 0.74rem;
+  color: var(--text-secondary);
+}
+
+.project-command {
+  color: var(--secondary);
+  font-size: 0.78rem;
+  margin-bottom: 10px;
+}
+
 .project-card::before {
   content: '';
   position: absolute;

@@ -1,4 +1,5 @@
 import './Hero.css'
+import { profileLinks } from '../config/links'
 
 export default function Hero() {
   return (
@@ -30,10 +31,10 @@ export default function Hero() {
           </p>
 
           <div className="quick-links">
-            <a href="mailto:svsamarsingh@gmail.com">svsamarsingh@gmail.com</a>
-            <a href="tel:+918409420691">+91 8409420691</a>
-            <a href="https://github.com/samariium" target="_blank" rel="noreferrer">GitHub</a>
-            <a href="https://linkedin.com/in/samar-singh-42577b1ab" target="_blank" rel="noreferrer">LinkedIn</a>
+            <a href={profileLinks.email}>svsamarsingh@gmail.com</a>
+            <a href={profileLinks.phone}>+91 8409420691</a>
+            <a href={profileLinks.github} target="_blank" rel="noreferrer">GitHub</a>
+            <a href={profileLinks.linkedin} target="_blank" rel="noreferrer">LinkedIn</a>
           </div>
           
           <div className="hero-stats">
@@ -56,9 +57,9 @@ export default function Hero() {
           </div>
 
           <div className="cta-buttons">
-            <a href="#projects" className="btn">Explore Projects</a>
+            <a href="#projects" className="btn">ls -la projects</a>
             <a href="#contact" className="btn btn-secondary">Let's Collaborate</a>
-            <a href="https://github.com/samariium" className="btn" target="_blank" rel="noreferrer">Open GitHub</a>
+            <a href={profileLinks.github} className="btn" target="_blank" rel="noreferrer">git clone profile</a>
           </div>
 
           <div className="cursor">|</div>

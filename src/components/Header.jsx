@@ -1,5 +1,6 @@
 import './Header.css'
 import { useState } from 'react'
+import { profileLinks } from '../config/links'
 
 export default function Header() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false)
@@ -23,8 +24,8 @@ export default function Header() {
         </nav>
 
         <div className="header-actions">
-          <a href="https://github.com/samariium" target="_blank" rel="noreferrer">GitHub</a>
-          <a href="https://linkedin.com/in/samar-singh-42577b1ab" target="_blank" rel="noreferrer">LinkedIn</a>
+          <a href={profileLinks.github} target="_blank" rel="noreferrer">GitHub</a>
+          <a href={profileLinks.linkedin} target="_blank" rel="noreferrer">LinkedIn</a>
         </div>
 
         <button 
