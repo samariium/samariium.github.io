@@ -17,6 +17,6 @@ export const projectLinks = {
   },
   aiTripPlanner: {
     repo: 'https://github.com/samariium/AI-Trip-Planner',
-    live: 'https://github.com/samariium/AI-Trip-Planner',
+    live: 'https://samariium.github.io/AI-Trip-Planner',
   },
 }
