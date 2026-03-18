@@ -1,0 +1,84 @@
+.about-grid {
+  display: grid;
+  grid-template-columns: 1.05fr 1fr;
+  gap: 20px;
+}
+
+.about-text-card {
+  border: 1px solid var(--border-color);
+  border-radius: 12px;
+  background: linear-gradient(150deg, rgba(16, 24, 52, 0.95), rgba(17, 27, 62, 0.95));
+  padding: 22px;
+  box-shadow: var(--shadow);
+}
+
+.about-text-card p {
+  color: var(--text-secondary);
+  font-size: 0.92rem;
+  line-height: 1.8;
+  margin-bottom: 12px;
+}
+
+.about-text-card p:last-child {
+  margin-bottom: 0;
+}
+
+.about-terminal {
+  border: 1px solid var(--border-color);
+  border-radius: 12px;
+  overflow: hidden;
+  background: rgba(7, 11, 29, 0.9);
+  box-shadow: var(--shadow);
+}
+
+.terminal-header-mini {
+  display: flex;
+  align-items: center;
+  gap: 7px;
+  padding: 10px 12px;
+  background: rgba(17, 27, 62, 0.9);
+  border-bottom: 1px solid var(--border-color);
+}
+
+.terminal-mini-title {
+  margin-left: auto;
+  color: var(--text-secondary);
+  font-size: 0.73rem;
+}
+
+.terminal-body-mini {
+  padding: 16px;
+  font-size: 0.82rem;
+  line-height: 1.9;
+}
+
+.terminal-body-mini p {
+  color: var(--text-secondary);
+}
+
+.terminal-body-mini .cmd {
+  color: var(--secondary);
+}
+
+.terminal-body-mini .k {
+  color: var(--accent);
+}
+
+.terminal-body-mini .v {
+  color: var(--primary);
+}
+
+.blink-caret {
+  display: inline-block;
+  width: 8px;
+  height: 14px;
+  background: var(--secondary);
+  vertical-align: middle;
+  animation: blink 1s steps(2, start) infinite;
+}
+
+@media (max-width: 900px) {
+  .about-grid {
+    grid-template-columns: 1fr;
+  }
+}

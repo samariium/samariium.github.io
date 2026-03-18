@@ -17,15 +17,18 @@ export default function Header() {
         </a>
         
         <nav className={`nav ${mobileMenuOpen ? 'mobile-open' : ''}`}>
-          <a href="#skills" onClick={closeMenu}>Skills</a>
-          <a href="#projects" onClick={closeMenu}>Projects</a>
-          <a href="#experience" onClick={closeMenu}>Experience</a>
-          <a href="#contact" onClick={closeMenu}>Contact</a>
+          <a href="#about" onClick={closeMenu}>./about</a>
+          <a href="#skills" onClick={closeMenu}>./skills</a>
+          <a href="#projects" onClick={closeMenu}>./projects</a>
+          <a href="#experience" onClick={closeMenu}>./experience</a>
+          <a href="#sysmon" onClick={closeMenu}>./sysmon</a>
+          <a href="#contact" onClick={closeMenu}>./contact</a>
         </nav>
 
         <div className="header-actions">
           <a href={profileLinks.github} target="_blank" rel="noreferrer">GitHub</a>
           <a href={profileLinks.linkedin} target="_blank" rel="noreferrer">LinkedIn</a>
+          <span className="status-pill"><span className="status-dot"></span>AVAILABLE</span>
         </div>
 
         <button 

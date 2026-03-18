@@ -16,6 +16,7 @@
   position: relative;
   overflow: hidden;
   box-shadow: var(--shadow);
+  clip-path: polygon(0 0, calc(100% - 14px) 0, 100% 14px, 100% 100%, 0 100%);
 }
 
 .project-terminal-bar {
@@ -57,6 +58,8 @@
   color: var(--secondary);
   font-size: 0.78rem;
   margin-bottom: 10px;
+  border-left: 2px solid var(--secondary);
+  padding-left: 8px;
 }
 
 .project-card::before {

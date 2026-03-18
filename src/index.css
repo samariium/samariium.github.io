@@ -26,6 +26,7 @@ body {
   font-size: 16px;
   line-height: 1.6;
   overflow-x: hidden;
+  cursor: none;
 }
 
 html {
@@ -49,6 +50,45 @@ html {
   background-size: 38px 38px;
   pointer-events: none;
   z-index: -1;
+}
+
+.app::after {
+  content: '';
+  position: fixed;
+  inset: 0;
+  background: repeating-linear-gradient(
+    0deg,
+    rgba(255, 255, 255, 0),
+    rgba(255, 255, 255, 0) 2px,
+    rgba(255, 255, 255, 0.03) 2px,
+    rgba(255, 255, 255, 0.03) 4px
+  );
+  pointer-events: none;
+  z-index: 250;
+}
+
+#custom-cursor {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 10px;
+  height: 10px;
+  border-radius: 999px;
+  background: var(--secondary);
+  box-shadow: 0 0 12px rgba(140, 255, 106, 0.65);
+  pointer-events: none;
+  z-index: 300;
+}
+
+#scroll-progress {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 0;
+  height: 3px;
+  background: linear-gradient(90deg, var(--secondary), var(--primary));
+  box-shadow: 0 0 16px rgba(89, 243, 255, 0.55);
+  z-index: 260;
 }
 
 /* Scrollbar styling */
@@ -198,5 +238,13 @@ html {
 
   .container {
     padding: 0 16px;
+  }
+
+  body {
+    cursor: auto;
+  }
+
+  #custom-cursor {
+    display: none;
   }
 }
