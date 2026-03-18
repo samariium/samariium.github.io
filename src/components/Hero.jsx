@@ -44,7 +44,6 @@ export default function Hero() {
         
         <div className="hero-text">
           <div className="chips-row">
-            <span className="chip">AWS Certified Cloud Practitioner</span>
             <span className="chip">DevOps Intern at Xebia</span>
           </div>
 

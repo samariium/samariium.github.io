@@ -35,7 +35,6 @@ export default function About() {
               <p><span className="k">"name"</span>: <span className="v">"Samar Singh"</span>,</p>
               <p><span className="k">"role"</span>: <span className="v">"DevOps Engineer"</span>,</p>
               <p><span className="k">"education"</span>: <span className="v">"B.Tech CSE @ UPES"</span>,</p>
-              <p><span className="k">"certification"</span>: <span className="v">"AWS CCP"</span>,</p>
               <p><span className="k">"location"</span>: <span className="v">"Dehradun, India"</span></p>
               <p><span className="cmd">$</span> <span className="blink-caret"></span></p>
             </div>
