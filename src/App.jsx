@@ -7,6 +7,10 @@ import Skills from './components/Skills'
 import Projects from './components/Projects'
 import Experience from './components/Experience'
 import SysMon from './components/SysMon'
+import DevOpsToolchain from './components/DevOpsToolchain'
+import CicdPipeline from './components/CicdPipeline'
+import InfrastructureMetrics from './components/InfrastructureMetrics'
+import KubernetesCluster from './components/KubernetesCluster'
 import Contact from './components/Contact'
 import Footer from './components/Footer'
 import CommandPalette from './components/CommandPalette'
@@ -28,6 +32,30 @@ export default function App() {
         label: 'ls ./projects',
         hint: 'Go to Projects section',
         action: () => document.getElementById('projects')?.scrollIntoView({ behavior: 'smooth' }),
+      },
+      {
+        id: 'devops',
+        label: 'cat ./devops-toolchain',
+        hint: 'Explore DevOps Toolchain',
+        action: () => document.getElementById('devops-toolchain')?.scrollIntoView({ behavior: 'smooth' }),
+      },
+      {
+        id: 'cicd',
+        label: 'tail -f ./pipelines.log',
+        hint: 'View CI/CD Pipeline Status',
+        action: () => document.getElementById('cicd-pipeline')?.scrollIntoView({ behavior: 'smooth' }),
+      },
+      {
+        id: 'infra',
+        label: 'df -h ./infrastructure',
+        hint: 'Check Infrastructure Metrics',
+        action: () => document.getElementById('infrastructure-metrics')?.scrollIntoView({ behavior: 'smooth' }),
+      },
+      {
+        id: 'k8s',
+        label: 'kubectl cluster-info',
+        hint: 'View Kubernetes Cluster',
+        action: () => document.getElementById('kubernetes-cluster')?.scrollIntoView({ behavior: 'smooth' }),
       },
       {
         id: 'contact',
@@ -145,6 +173,10 @@ export default function App() {
       <Projects />
       <Experience />
       <SysMon />
+      <DevOpsToolchain />
+      <CicdPipeline />
+      <InfrastructureMetrics />
+      <KubernetesCluster />
       <Contact />
       <Footer />
       <CommandPalette open={paletteOpen} onClose={() => setPaletteOpen(false)} commands={commands} />

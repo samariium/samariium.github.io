@@ -1,0 +1,457 @@
+.kubernetes-cluster {
+  margin: 4rem 2rem;
+  padding: 0;
+  border: 2px solid var(--primary);
+  background: linear-gradient(135deg, rgba(89, 243, 255, 0.02) 0%, rgba(140, 255, 106, 0.02) 100%);
+  clip-path: polygon(0 0, calc(100% - 20px) 0, 100% 20px, 100% 100%, 0 100%);
+}
+
+.kubernetes-cluster .terminal-header {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 12px 16px;
+  border-bottom: 2px solid var(--primary);
+  background: rgba(0, 20, 40, 0.6);
+}
+
+.kubernetes-cluster .traffic-lights {
+  display: flex;
+  gap: 6px;
+}
+
+.kubernetes-cluster .traffic-lights span {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: #ff5f56;
+}
+
+.kubernetes-cluster .traffic-lights span:nth-child(2) {
+  background: #ffbd2e;
+}
+
+.kubernetes-cluster .traffic-lights span:nth-child(3) {
+  background: #27c93f;
+}
+
+.kubernetes-cluster .filename {
+  color: var(--primary);
+  font-size: 0.9rem;
+  font-weight: 500;
+  font-family: 'Courier New', monospace;
+}
+
+.k8s-container {
+  padding: 20px;
+  background: rgba(0, 20, 40, 0.5);
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  min-height: 500px;
+}
+
+.k8s-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-bottom: 12px;
+  border-bottom: 2px solid var(--primary);
+}
+
+.header-title {
+  color: var(--secondary);
+  font-family: 'Courier New', monospace;
+  font-size: 0.95rem;
+  font-weight: 500;
+}
+
+.cluster-badge {
+  background: rgba(89, 243, 255, 0.15);
+  border: 1px solid var(--primary);
+  color: var(--primary);
+  padding: 4px 10px;
+  border-radius: 3px;
+  font-family: 'Courier New', monospace;
+  font-size: 0.75rem;
+  font-weight: 500;
+}
+
+.k8s-tabs {
+  display: flex;
+  gap: 8px;
+  border-bottom: 1px solid var(--primary);
+}
+
+.tab-btn {
+  padding: 10px 16px;
+  background: transparent;
+  border: none;
+  border-bottom: 2px solid transparent;
+  color: #888;
+  cursor: pointer;
+  font-family: 'Courier New', monospace;
+  font-size: 0.85rem;
+  font-weight: 500;
+  transition: all 0.2s ease;
+  display: flex;
+  gap: 6px;
+  align-items: center;
+}
+
+.tab-btn:hover {
+  color: var(--primary);
+}
+
+.tab-btn.active {
+  color: var(--primary);
+  border-bottom-color: var(--primary);
+}
+
+.tab-label {
+  display: inline;
+}
+
+.tab-count {
+  color: var(--secondary);
+  font-size: 0.75rem;
+}
+
+.k8s-content {
+  flex: 1;
+  overflow-y: auto;
+  padding-right: 8px;
+}
+
+.view-header {
+  color: var(--secondary);
+  font-family: 'Courier New', monospace;
+  font-size: 0.8rem;
+  margin-bottom: 12px;
+  padding: 8px;
+  background: rgba(140, 255, 106, 0.05);
+  border-left: 3px solid var(--secondary);
+}
+
+/* Nodes View */
+.nodes-list {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.node-item {
+  padding: 14px;
+  background: rgba(89, 243, 255, 0.03);
+  border: 1px solid var(--primary);
+  border-radius: 4px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 16px;
+  transition: all 0.2s ease;
+}
+
+.node-item:hover {
+  background: rgba(89, 243, 255, 0.08);
+}
+
+.node-main {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  flex: 1;
+}
+
+.node-status {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.status-dot {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: var(--secondary);
+}
+
+.status-dot.ready {
+  background: var(--secondary);
+  box-shadow: 0 0 6px var(--secondary);
+}
+
+.node-name {
+  color: var(--text);
+  font-family: 'Courier New', monospace;
+  font-size: 0.9rem;
+  font-weight: 500;
+}
+
+.node-status-text {
+  color: var(--secondary);
+  font-family: 'Courier New', monospace;
+  font-size: 0.8rem;
+}
+
+.node-metrics {
+  display: flex;
+  gap: 24px;
+}
+
+.metric-single {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 4px;
+}
+
+.metric-single .label {
+  color: #999;
+  font-family: 'Courier New', monospace;
+  font-size: 0.7rem;
+}
+
+.bar-small {
+  width: 60px;
+  height: 12px;
+  background: rgba(0, 0, 0, 0.3);
+  border: 1px solid var(--primary);
+  border-radius: 2px;
+  overflow: hidden;
+}
+
+.bar-small .fill {
+  height: 100%;
+  transition: width 0.5s ease;
+}
+
+.bar-small .fill.healthy {
+  background: var(--secondary);
+}
+
+.bar-small .fill.warning {
+  background: var(--accent);
+}
+
+.bar-small .fill.critical {
+  background: #ff5555;
+}
+
+.metric-single .value {
+  color: var(--text);
+  font-family: 'Courier New', monospace;
+  font-size: 0.8rem;
+  font-weight: 500;
+}
+
+.metric-single .pod-count {
+  color: var(--primary);
+}
+
+/* Namespaces View */
+.namespaces-list {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.namespace-item {
+  padding: 14px;
+  background: rgba(89, 243, 255, 0.03);
+  border: 1px solid var(--primary);
+  border-radius: 4px;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  transition: all 0.2s ease;
+}
+
+.namespace-item:hover {
+  background: rgba(89, 243, 255, 0.08);
+}
+
+.ns-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.ns-name {
+  color: var(--text);
+  font-family: 'Courier New', monospace;
+  font-size: 0.95rem;
+  font-weight: 500;
+}
+
+.status-badge {
+  background: rgba(140, 255, 106, 0.15);
+  color: var(--secondary);
+  padding: 3px 8px;
+  border-radius: 2px;
+  font-family: 'Courier New', monospace;
+  font-size: 0.7rem;
+}
+
+.ns-details {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 12px;
+}
+
+.detail-field {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+
+.detail-field .label {
+  color: #999;
+  font-family: 'Courier New', monospace;
+  font-size: 0.7rem;
+}
+
+.detail-field .value {
+  color: var(--text);
+  font-family: 'Courier New', monospace;
+  font-size: 0.85rem;
+  font-weight: 500;
+}
+
+/* Services View */
+.services-list {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.service-item {
+  padding: 14px;
+  background: rgba(89, 243, 255, 0.03);
+  border: 1px solid var(--primary);
+  border-radius: 4px;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  transition: all 0.2s ease;
+}
+
+.service-item:hover {
+  background: rgba(89, 243, 255, 0.08);
+}
+
+.service-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.service-info {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.status-indicator {
+  font-size: 0.9rem;
+  font-weight: bold;
+}
+
+.status-indicator.healthy {
+  color: var(--secondary);
+}
+
+.status-indicator.warning {
+  color: var(--accent);
+}
+
+.service-name {
+  color: var(--text);
+  font-family: 'Courier New', monospace;
+  font-size: 0.95rem;
+  font-weight: 500;
+}
+
+.service-type {
+  background: rgba(255, 209, 102, 0.15);
+  color: var(--accent);
+  padding: 3px 8px;
+  border-radius: 2px;
+  font-family: 'Courier New', monospace;
+  font-size: 0.7rem;
+  font-weight: 500;
+}
+
+.service-details {
+  display: flex;
+  gap: 24px;
+  padding-top: 8px;
+  border-top: 1px solid var(--primary);
+}
+
+.service-details .detail {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+
+.service-details .label {
+  color: #999;
+  font-family: 'Courier New', monospace;
+  font-size: 0.7rem;
+}
+
+.service-details .value {
+  color: var(--primary);
+  font-family: 'Courier New', monospace;
+  font-size: 0.85rem;
+  font-weight: 500;
+}
+
+.k8s-footer {
+  padding-top: 12px;
+  border-top: 1px solid var(--primary);
+  color: var(--primary);
+  font-family: 'Courier New', monospace;
+  font-size: 0.75rem;
+  opacity: 0.7;
+}
+
+.footer-text {
+  display: inline-block;
+  animation: blink 1.5s ease-in-out infinite;
+}
+
+@keyframes blink {
+  0%, 49% {
+    opacity: 1;
+  }
+  50%, 100% {
+    opacity: 0.4;
+  }
+}
+
+@media (max-width: 768px) {
+  .k8s-container {
+    gap: 12px;
+  }
+
+  .node-item {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .node-metrics {
+    width: 100%;
+    justify-content: flex-start;
+  }
+
+  .ns-details {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .service-details {
+    flex-direction: column;
+    gap: 8px;
+  }
+}

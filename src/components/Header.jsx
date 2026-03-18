@@ -22,6 +22,10 @@ export default function Header() {
           <a href="#projects" onClick={closeMenu}>./projects</a>
           <a href="#experience" onClick={closeMenu}>./experience</a>
           <a href="#sysmon" onClick={closeMenu}>./sysmon</a>
+          <a href="#devops-toolchain" onClick={closeMenu}>./devops</a>
+          <a href="#cicd-pipeline" onClick={closeMenu}>./pipelines</a>
+          <a href="#infrastructure-metrics" onClick={closeMenu}>./infra</a>
+          <a href="#kubernetes-cluster" onClick={closeMenu}>./k8s</a>
           <a href="#contact" onClick={closeMenu}>./contact</a>
         </nav>
 
