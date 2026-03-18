@@ -1,21 +1,21 @@
 .footer {
-  background-color: var(--card-bg);
-  border-top: 2px solid var(--border-color);
-  padding: 40px 0;
-  margin-top: 60px;
+  background-color: rgba(16, 24, 52, 0.9);
+  border-top: 1px solid var(--border-color);
+  padding: 26px 0;
+  margin-top: 44px;
 }
 
 .footer-content {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
-  gap: 30px;
+  gap: 16px;
   align-items: center;
   text-align: center;
 }
 
 .footer-text {
   color: var(--text-secondary);
-  font-size: 0.95rem;
+  font-size: 0.82rem;
 }
 
 .footer-text p {
@@ -25,23 +25,28 @@
 .footer-links {
   display: flex;
   justify-content: center;
-  gap: 30px;
+  gap: 14px;
   flex-wrap: wrap;
 }
 
 .footer-links a {
-  color: var(--primary);
+  color: var(--text-primary);
+  font-size: 0.83rem;
+  border: 1px solid transparent;
+  border-radius: 8px;
+  padding: 5px 8px;
   text-decoration: none;
   transition: all 0.3s ease;
 }
 
 .footer-links a:hover {
   color: var(--secondary);
+  border-color: var(--border-color);
 }
 
 .footer-credit {
   color: var(--text-secondary);
-  font-size: 0.85rem;
+  font-size: 0.79rem;
 }
 
 .footer-credit p {

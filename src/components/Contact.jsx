@@ -24,7 +24,7 @@ export default function Contact() {
   }
 
   return (
-    <section id="contact" className="contact section">
+    <section id="contact" className="contact section reveal">
       <div className="container">
         <h2 className="section-title">Get In Touch</h2>
         
@@ -55,15 +55,17 @@ export default function Contact() {
             </div>
 
             <div className="social-links">
-              <h4>Connect</h4>
+              <h4>Quick Actions</h4>
               <div className="links">
                 <a href="https://github.com/samariium" target="_blank" rel="noopener noreferrer" className="social-link">GitHub</a>
                 <a href="https://linkedin.com/in/samar-singh-42577b1ab" target="_blank" rel="noopener noreferrer" className="social-link">LinkedIn</a>
+                <a href="mailto:svsamarsingh@gmail.com" className="social-link">Email</a>
               </div>
             </div>
           </div>
 
           <form className="contact-form" onSubmit={handleSubmit}>
+            <h3>Send me a message</h3>
             <div className="form-group">
               <label htmlFor="name">Name</label>
               <input

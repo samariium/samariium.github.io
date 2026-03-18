@@ -1,29 +1,32 @@
 .header {
   position: sticky;
   top: 0;
-  z-index: 100;
-  background-color: rgba(10, 14, 39, 0.95);
-  border-bottom: 2px solid var(--border-color);
-  backdrop-filter: blur(10px);
+  z-index: 200;
+  background-color: rgba(7, 11, 29, 0.8);
+  border-bottom: 1px solid var(--border-color);
+  backdrop-filter: blur(12px);
 }
 
 .header-content {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 20px 0;
+  gap: 18px;
+  padding: 14px 0;
 }
 
 .logo {
-  font-size: 1.5rem;
+  font-size: 1.08rem;
   font-weight: bold;
   color: var(--primary);
-  text-shadow: 0 0 10px rgba(0, 212, 255, 0.5);
+  text-shadow: 0 0 10px rgba(89, 243, 255, 0.35);
+  text-decoration: none;
+  flex-shrink: 0;
 }
 
 .logo span:nth-child(2) {
   color: var(--secondary);
-  margin: 0 5px;
+  margin: 0 6px;
 }
 
 .bracket {
@@ -32,13 +35,15 @@
 
 .nav {
   display: flex;
-  gap: 40px;
+  gap: 24px;
 }
 
 .nav a {
   color: var(--text-primary);
   text-decoration: none;
-  font-size: 1rem;
+  font-size: 0.9rem;
+  font-weight: 600;
+  letter-spacing: 0.02em;
   transition: all 0.3s ease;
   position: relative;
 }
@@ -46,7 +51,7 @@
 .nav a::before {
   content: '';
   position: absolute;
-  bottom: -5px;
+  bottom: -6px;
   left: 0;
   width: 0;
   height: 2px;
@@ -55,11 +60,34 @@
 }
 
 .nav a:hover {
-  color: var(--primary);
+  color: var(--secondary);
 }
 
 .nav a:hover::before {
   width: 100%;
+}
+
+.header-actions {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.header-actions a {
+  padding: 7px 10px;
+  border-radius: 8px;
+  border: 1px solid var(--border-color);
+  background: rgba(89, 243, 255, 0.05);
+  color: var(--text-primary);
+  font-size: 0.77rem;
+  text-decoration: none;
+  transition: all 0.25s ease;
+}
+
+.header-actions a:hover {
+  transform: translateY(-1px);
+  border-color: var(--secondary);
+  color: var(--secondary);
 }
 
 .menu-toggle {
@@ -78,17 +106,22 @@
     left: 0;
     right: 0;
     flex-direction: column;
-    gap: 20px;
-    background-color: var(--card-bg);
+    gap: 14px;
+    background-color: rgba(16, 24, 52, 0.98);
     padding: 20px;
-    border-bottom: 2px solid var(--border-color);
+    border-bottom: 1px solid var(--border-color);
     max-height: 0;
     overflow: hidden;
     transition: max-height 0.3s ease;
+    text-align: center;
   }
 
   .nav.mobile-open {
     max-height: 300px;
+  }
+
+  .header-actions {
+    display: none;
   }
 
   .menu-toggle {
@@ -96,6 +129,6 @@
   }
 
   .logo {
-    font-size: 1.1rem;
+    font-size: 1rem;
   }
 }

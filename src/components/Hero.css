@@ -2,7 +2,7 @@
   min-height: 100vh;
   display: flex;
   align-items: center;
-  padding: 100px 0;
+  padding: 110px 0 76px;
   position: relative;
   overflow: hidden;
 }
@@ -14,8 +14,8 @@
   left: -50%;
   width: 200%;
   height: 100%;
-  background: radial-gradient(circle at 20% 50%, rgba(0, 212, 255, 0.1) 0%, transparent 50%),
-              radial-gradient(circle at 80% 80%, rgba(0, 255, 136, 0.1) 0%, transparent 50%);
+  background: radial-gradient(circle at 14% 30%, rgba(89, 243, 255, 0.2) 0%, transparent 48%),
+    radial-gradient(circle at 88% 82%, rgba(140, 255, 106, 0.17) 0%, transparent 42%);
   animation: move-background 20s ease infinite;
   pointer-events: none;
 }
@@ -32,9 +32,9 @@
 
 .terminal-header {
   background-color: var(--card-bg);
-  border: 2px solid var(--border-color);
-  border-radius: 8px 8px 0 0;
-  padding: 15px 20px;
+  border: 1px solid var(--border-color);
+  border-radius: 14px 14px 0 0;
+  padding: 13px 18px;
   display: flex;
   align-items: center;
   gap: 10px;
@@ -65,23 +65,34 @@
 }
 
 .terminal-path {
-  font-size: 0.8rem;
+  font-size: 0.78rem;
   color: var(--text-secondary);
   margin-left: auto;
 }
 
 .hero-text {
-  background-color: var(--card-bg);
-  border: 2px solid var(--border-color);
+  background: linear-gradient(145deg, rgba(16, 24, 52, 0.94), rgba(17, 27, 62, 0.95));
+  border: 1px solid var(--border-color);
   border-top: none;
-  border-radius: 0 0 8px 8px;
-  padding: 40px;
+  border-radius: 0 0 14px 14px;
+  padding: 34px;
   animation: slideIn 0.8s ease;
+  box-shadow: var(--shadow);
+}
+
+.chips-row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-bottom: 18px;
 }
 
 .hero-text h1 {
-  font-size: 2.5rem;
-  margin-bottom: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  font-size: clamp(2.1rem, 5vw, 3.2rem);
+  margin-bottom: 18px;
   color: var(--primary);
   animation: glow 2s ease-in-out infinite;
 }
@@ -89,53 +100,83 @@
 .command {
   color: var(--secondary);
   margin-right: 5px;
+  font-size: 0.95rem;
 }
 
 .welcome {
   color: var(--text-primary);
+  font-weight: 800;
+  line-height: 1.1;
 }
 
 .subtitle {
-  font-size: 1.2rem;
+  max-width: 740px;
+  font-size: 1rem;
   color: var(--text-secondary);
-  margin-bottom: 40px;
+  margin-bottom: 24px;
   animation: slideIn 0.8s ease 0.2s backwards;
+}
+
+.quick-links {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-bottom: 24px;
+}
+
+.quick-links a {
+  text-decoration: none;
+  font-size: 0.83rem;
+  color: var(--text-primary);
+  padding: 8px 11px;
+  border: 1px solid var(--border-color);
+  border-radius: 10px;
+  background: rgba(89, 243, 255, 0.06);
+  transition: all 0.25s ease;
+}
+
+.quick-links a:hover {
+  color: var(--secondary);
+  border-color: var(--secondary);
+  transform: translateY(-2px);
 }
 
 .hero-stats {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-  gap: 20px;
-  margin: 40px 0;
+  gap: 14px;
+  margin: 28px 0;
 }
 
 .stat {
-  padding: 20px;
-  background-color: rgba(0, 212, 255, 0.05);
+  padding: 16px;
+  background-color: rgba(89, 243, 255, 0.07);
   border: 1px solid var(--border-color);
-  border-radius: 4px;
+  border-radius: 10px;
   transition: all 0.3s ease;
 }
 
 .stat:hover {
-  background-color: rgba(0, 212, 255, 0.1);
-  border-color: var(--primary);
-  transform: translateY(-5px);
+  background-color: rgba(89, 243, 255, 0.12);
+  border-color: var(--secondary);
+  transform: translateY(-4px);
 }
 
 .stat-label {
-  color: var(--secondary);
-  margin-right: 10px;
+  color: var(--accent);
+  margin-right: 8px;
+  font-weight: 700;
 }
 
 .stat-value {
   color: var(--text-primary);
+  font-size: 0.92rem;
 }
 
 .cta-buttons {
   display: flex;
-  gap: 20px;
-  margin-top: 40px;
+  gap: 12px;
+  margin-top: 24px;
   flex-wrap: wrap;
 }
 
@@ -155,15 +196,15 @@
 @media (max-width: 768px) {
   .hero {
     min-height: auto;
-    padding: 50px 0;
+    padding: 74px 0 44px;
   }
 
   .hero-text h1 {
-    font-size: 1.8rem;
+    font-size: 1.9rem;
   }
 
   .subtitle {
-    font-size: 1rem;
+    font-size: 0.95rem;
   }
 
   .hero-stats {
