@@ -26,7 +26,6 @@ export default function Header() {
           <a href="#cicd-pipeline" onClick={closeMenu}>./pipelines</a>
           <a href="#infrastructure-metrics" onClick={closeMenu}>./infra</a>
           <a href="#kubernetes-cluster" onClick={closeMenu}>./k8s</a>
-          <a href="#infra-defense-game" onClick={closeMenu}>./game</a>
           <a href="#contact" onClick={closeMenu}>./contact</a>
         </nav>
 
